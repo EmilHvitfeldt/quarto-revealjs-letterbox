@@ -6,6 +6,16 @@ progress: false
 menu: false
 ---
 
+## Further Modifying theme
+
+If you want to modify theme, you can specify the `.scss` my modifying the yaml to look like this
+
+```yaml
+format: 
+  letterbox-revealjs:
+    theme: [default, style.scss]
+```
+
 ## Quarto
 
 Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
