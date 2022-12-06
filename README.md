@@ -2,6 +2,12 @@
 
 A [Quarto](https://quarto.org) extension for authoring letterbox styled Reveal.js presentations. This style is inspired of [xaringan](https://slides.yihui.org/xaringan/), and is an extension of the work of [Charlotte](https://twitter.com/charliejhadley) [seen here](https://www.visibledata.co.uk/posts/2022-08-04_how-i-learned-to-stop-replicating-everything-from-xaringan-and-love-quarto/).
 
+## Example
+
+[![](example.gif)](https://emilhvitfeldt.github.io/quarto-letterbox/)
+
+[Live version](https://emilhvitfeldt.github.io/quarto-letterbox/)
+
 ## Installation
 
 To start a new presentation:
