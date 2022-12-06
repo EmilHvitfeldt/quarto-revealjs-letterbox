@@ -1,0 +1,7 @@
+title: letterbox
+author: Emil Hvitfeldt
+version: 1.0.0
+contributes:
+  format:
+    revealjs:
+      theme: [default, letterbox.scss]

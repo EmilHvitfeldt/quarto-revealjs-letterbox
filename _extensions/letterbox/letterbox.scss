@@ -1,0 +1,30 @@
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+
+.quarto-light {
+  background-color: #D8D8D3;
+}
+
+.quarto-dark {
+  background-color: #D8D8D3;
+}
+
+html.print-pdf .quarto-light {
+  background-color: $body-bg;
+}
+
+html.print-pdf .quarto-dark {
+  background-color: $body-bg;
+}
+
+.slides {
+  background-color: $body-bg;
+  border-width: 20px 80px 20px 80px;
+  border-style: solid;
+  border-color: $body-bg;
+  box-shadow: rgb(136, 136, 136) 0px 0px 30px 0px;
+
+  border-top-width: 40px;
+  border-bottom-width: 40px;
+}
