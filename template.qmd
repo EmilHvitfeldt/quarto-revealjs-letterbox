@@ -16,6 +16,24 @@ format:
     theme: [default, style.scss]
 ```
 
+## Modifying letterbox background
+
+The background colors can be with with, where `#444444` represents the new background color and `#222222` represents the color of the shadow
+
+```css
+.quarto-light {
+  background-color: #444444;
+}
+
+.quarto-dark {
+  background-color: #444444;
+}
+
+.slides {
+  box-shadow: #222222 0px 0px 30px 0px;
+}
+```
+
 ## Quarto
 
 Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
