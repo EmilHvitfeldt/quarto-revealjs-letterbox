@@ -1,6 +1,6 @@
 title: letterbox
 author: Emil Hvitfeldt
-version: 1.0.0
+version: 1.1.0
 contributes:
   format:
     revealjs:
