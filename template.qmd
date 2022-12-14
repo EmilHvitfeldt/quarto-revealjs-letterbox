@@ -6,11 +6,43 @@ progress: false
 menu: false
 ---
 
+## .image-right
+
+::: columns
+::: {.column width="45%"}
+We can use the `.image-right`, `.image-left` and `.image-full-cover` classes to insert images in the background
+
+These images will be placed behind most other content
+:::
+:::
+
+![](flowers-two.jpeg){.image-right}
+
+## .image-left {style="text-align: right;"}
+
+::: columns
+::: {.column width="55%"}
+:::
+::: {.column width="45%"}
+It is therefore recommened that you use [multiple columns](https://quarto.org/docs/presentations/index.html#multiple-columns) to only have text on the background area
+:::
+:::
+
+![](flowers-two.jpeg){.image-left}
+
+## 
+
+::: r-fit-text
+[.image-full-cover]{style="color: hotpink;"}
+:::
+
+![](flowers-many.jpeg){.image-full-cover}
+
 ## Further Modifying theme
 
 If you want to modify theme, you can specify the `.scss` my modifying the yaml to look like this
 
-```yaml
+``` yaml
 format: 
   letterbox-revealjs:
     theme: [default, style.scss]
@@ -20,7 +52,7 @@ format:
 
 The background colors can be with with, where `#444444` represents the new background color and `#222222` represents the color of the shadow
 
-```css
+``` css
 .quarto-light {
   background-color: #444444;
 }
