@@ -1,13 +1,16 @@
 /*-- scss:defaults --*/
 
+$border-leftright-width: 80px;
+$border-updown-width: 40px;
+
 /*-- scss:rules --*/
 
 .quarto-light {
-  background-color: #D8D8D3;
+  background-color: #333333;
 }
 
 .quarto-dark {
-  background-color: #D8D8D3;
+  background-color: #333333;
 }
 
 html.print-pdf .quarto-light {
@@ -20,11 +23,53 @@ html.print-pdf .quarto-dark {
 
 .slides {
   background-color: $body-bg;
-  border-width: 20px 80px 20px 80px;
   border-style: solid;
   border-color: $body-bg;
-  box-shadow: rgb(136, 136, 136) 0px 0px 30px 0px;
+  box-shadow: #222222 0px 0px 30px 0px;
 
+  border-left-width: 80px;
+  border-right-width: 80px;
   border-top-width: 40px;
   border-bottom-width: 40px;
+}
+
+.image-left {
+  position: absolute;
+  top: -$border-updown-width;
+  left: -$border-leftright-width;
+  height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
+  width: calc(var(--slide-width) / 2 + #{$border-leftright-width}) !important;
+  max-height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
+  max-width: calc(var(--slide-width) / 2 + #{$border-leftright-width}) !important;
+  margin: 0 !important;
+  z-index: -1;
+}
+
+.image-right {
+  position: absolute;
+  top: -$border-updown-width;
+  right: -$border-leftright-width;
+  height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
+  width: calc(var(--slide-width) / 2 + #{$border-leftright-width}) !important;
+  max-height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
+  max-width: calc(var(--slide-width) / 2 + #{$border-leftright-width}) !important;
+  margin: 0 !important;
+  z-index: -1;
+}
+
+.image-full-cover {
+  position: absolute;
+  top: -$border-updown-width;
+  right: -$border-leftright-width;
+  height: auto !important;
+  width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
+  max-width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
+  margin: 0 !important;
+  z-index: -1;
+  clip: rect(
+    0px,
+    calc(var(--slide-width) + #{$border-leftright-width} * 2),
+    calc(var(--slide-height) + #{$border-updown-width} * 2),
+    0px
+  );
 }
