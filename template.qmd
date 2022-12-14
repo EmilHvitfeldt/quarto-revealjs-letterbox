@@ -38,6 +38,18 @@ It is therefore recommened that you use [multiple columns](https://quarto.org/do
 
 ![](flowers-many.jpeg){.image-full-cover}
 
+## Setting background colors
+
+You can change the background color by adding the following in a slide
+
+```md
+:::{.background-color color="aquamarine"}
+:::
+```
+
+:::{.background-color color="aquamarine"}
+:::
+
 ## Further Modifying theme
 
 If you want to modify theme, you can specify the `.scss` my modifying the yaml to look like this

@@ -5,3 +5,4 @@ contributes:
   format:
     revealjs:
       theme: [default, letterbox.scss]
+      include-after-body: theme.html

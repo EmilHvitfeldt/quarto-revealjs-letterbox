@@ -73,3 +73,15 @@ html.print-pdf .quarto-dark {
     0px
   );
 }
+
+.background-color-div {
+  position: absolute;
+  top: -$border-updown-width;
+  right: -$border-leftright-width;
+  height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
+  width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
+  max-height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
+  max-width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
+  margin: 0 !important;
+  z-index: -1;
+}
