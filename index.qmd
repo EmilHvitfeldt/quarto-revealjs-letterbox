@@ -1,7 +1,9 @@
 ---
 title: "xaringan styled letterbox"
 subtitle: "quarto-letterbox"
-format: letterbox-revealjs
+format: 
+  revealjs:
+    theme: [letterbox.scss]
 progress: false
 menu: false
 ---
