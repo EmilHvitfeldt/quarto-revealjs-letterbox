@@ -85,3 +85,9 @@ html.print-pdf .quarto-dark {
   margin: 0 !important;
   z-index: -1;
 }
+
+.reveal .slide-menu-button {
+  left: 8px - $border-leftright-width / 2 !important;
+  bottom: 8px - $border-updown-width / 2 !important;
+  pointer-events: auto;
+}
