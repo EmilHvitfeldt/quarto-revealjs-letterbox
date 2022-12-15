@@ -2,7 +2,6 @@
 title: "xaringan styled letterbox"
 subtitle: "quarto-letterbox"
 format: letterbox-revealjs
-progress: false
 ---
 
 ## .image-right

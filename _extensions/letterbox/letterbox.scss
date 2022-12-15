@@ -91,3 +91,10 @@ html.print-pdf .quarto-dark {
   bottom: 8px - $border-updown-width / 2 !important;
   pointer-events: auto;
 }
+
+.reveal .progress {
+  z-index: 100;
+  bottom: - $border-updown-width;
+  width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
+  left: -$border-leftright-width;
+}
