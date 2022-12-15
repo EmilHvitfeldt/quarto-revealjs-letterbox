@@ -38,17 +38,9 @@ It is therefore recommened that you use [multiple columns](https://quarto.org/do
 
 ![](flowers-many.jpeg){.image-full-cover}
 
-## Setting background colors
+## Setting background colors {background-color="aquamarine"}
 
-You can change the background color by adding the following in a slide
-
-```md
-:::{.background-color color="aquamarine"}
-:::
-```
-
-:::{.background-color color="aquamarine"}
-:::
+you can set your background as you normally would
 
 ## Further Modifying theme
 

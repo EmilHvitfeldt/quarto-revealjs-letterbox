@@ -1,12 +1,22 @@
 <script>
-bg_color = document.querySelectorAll(".background-color");
+// Copy over background colors to new div
+bg_color = document.querySelectorAll('[data-background-color]');
 
 Array.from(bg_color).map(function (x) {
-  const color = x.attributes.color.value;
+  const color = x.dataset.backgroundColor;
 
   var bg_color_div = document.createElement('div');
   bg_color_div.setAttribute("class", "background-color-div");
   bg_color_div.style.backgroundColor = color;
-  x.parentElement.appendChild(bg_color_div);
+  x.appendChild(bg_color_div);
+  x.removeAttribute("data-background-color");
+})
+
+// Remove background colors from backgrounds div
+Array.from(
+  document.querySelectorAll("[data-background-hash]")
+).map(function (x) {
+  x.removeAttribute("data-background-hash");
+  x.style.backgroundColor = null;
 })
 </script>
