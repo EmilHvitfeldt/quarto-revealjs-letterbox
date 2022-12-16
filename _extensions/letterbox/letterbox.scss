@@ -8,6 +8,17 @@ $border-updown-width: 40px;
 $slide-width: calc(var(--slide-width) + #{$border-leftright-width} * 2);
 $slide-height: calc(var(--slide-height) + #{$border-updown-width} * 2);
 
+@mixin full-screen {
+  position: absolute;
+  top: -$border-updown-width;
+  right: -$border-leftright-width;
+  height: $slide-height !important;
+  width: $slide-width !important;
+  max-height: $slide-height !important;
+  max-width: $slide-width !important;
+  margin: 0 !important;
+  z-index: -1;
+}
 
 .quarto-light {
   background-color: #D8D8D3;
@@ -38,51 +49,25 @@ html.print-pdf .quarto-dark {
 }
 
 .image-left {
-  position: absolute;
-  top: -$border-updown-width;
+  @include full-screen;
   left: -$border-leftright-width;
-  height: $slide-height !important;
   width: $slide-width / 2 !important;
-  max-height: $slide-height !important;
   max-width: $slide-width / 2 !important;
-  margin: 0 !important;
-  z-index: -1;
 }
 
 .image-right {
-  position: absolute;
-  top: -$border-updown-width;
+  @include full-screen;
   right: -$border-leftright-width;
-  height: $slide-height !important;
   width: $slide-width / 2 !important;
-  max-height: $slide-height !important;
   max-width: $slide-width / 2 !important;
-  margin: 0 !important;
-  z-index: -1;
 }
 
 .background-color-div {
-  position: absolute;
-  top: -$border-updown-width;
-  right: -$border-leftright-width;
-  height: $slide-height !important;
-  width: $slide-width !important;
-  max-height: $slide-height !important;
-  max-width: $slide-width !important;
-  margin: 0 !important;
-  z-index: -1;
+  @include full-screen;
 }
 
 .background-image-div {
-  position: absolute;
-  top: -$border-updown-width;
-  right: -$border-leftright-width;
-  height: $slide-height !important;
-  width: $slide-width !important;
-  max-height: $slide-height !important;
-  max-width: $slide-width !important;
-  margin: 0 !important;
-  z-index: -1;
+  @include full-screen;
 }
 
 
