@@ -5,6 +5,10 @@ $border-updown-width: 40px;
 
 /*-- scss:rules --*/
 
+$slide-width: calc(var(--slide-width) + #{$border-leftright-width} * 2);
+$slide-height: calc(var(--slide-height) + #{$border-updown-width} * 2);
+
+
 .quarto-light {
   background-color: #D8D8D3;
 }
@@ -37,10 +41,10 @@ html.print-pdf .quarto-dark {
   position: absolute;
   top: -$border-updown-width;
   left: -$border-leftright-width;
-  height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
-  width: calc(var(--slide-width) / 2 + #{$border-leftright-width}) !important;
-  max-height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
-  max-width: calc(var(--slide-width) / 2 + #{$border-leftright-width}) !important;
+  height: $slide-height !important;
+  width: $slide-width / 2 !important;
+  max-height: $slide-height !important;
+  max-width: $slide-width / 2 !important;
   margin: 0 !important;
   z-index: -1;
 }
@@ -49,10 +53,10 @@ html.print-pdf .quarto-dark {
   position: absolute;
   top: -$border-updown-width;
   right: -$border-leftright-width;
-  height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
-  width: calc(var(--slide-width) / 2 + #{$border-leftright-width}) !important;
-  max-height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
-  max-width: calc(var(--slide-width) / 2 + #{$border-leftright-width}) !important;
+  height: $slide-height !important;
+  width: $slide-width / 2 !important;
+  max-height: $slide-height !important;
+  max-width: $slide-width / 2 !important;
   margin: 0 !important;
   z-index: -1;
 }
@@ -61,10 +65,10 @@ html.print-pdf .quarto-dark {
   position: absolute;
   top: -$border-updown-width;
   right: -$border-leftright-width;
-  height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
-  width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
-  max-height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
-  max-width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
+  height: $slide-height !important;
+  width: $slide-width !important;
+  max-height: $slide-height !important;
+  max-width: $slide-width !important;
   margin: 0 !important;
   z-index: -1;
 }
@@ -73,10 +77,10 @@ html.print-pdf .quarto-dark {
   position: absolute;
   top: -$border-updown-width;
   right: -$border-leftright-width;
-  height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
-  width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
-  max-height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
-  max-width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
+  height: $slide-height !important;
+  width: $slide-width !important;
+  max-height: $slide-height !important;
+  max-width: $slide-width !important;
   margin: 0 !important;
   z-index: -1;
 }
@@ -91,6 +95,6 @@ html.print-pdf .quarto-dark {
 .reveal .progress {
   z-index: 100;
   bottom: - $border-updown-width;
-  width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
+  width: $slide-width !important;
   left: -$border-leftright-width;
 }
