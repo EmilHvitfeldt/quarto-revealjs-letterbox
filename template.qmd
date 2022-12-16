@@ -8,7 +8,7 @@ format: letterbox-revealjs
 
 ::: columns
 ::: {.column width="45%"}
-We can use the `.image-right`, `.image-left` and `.image-full-cover` classes to insert images in the background
+We can use the `.image-right` and `.image-left` classes to insert images in the background
 
 These images will be placed behind most other content
 :::
@@ -28,13 +28,11 @@ It is therefore recommened that you use [multiple columns](https://quarto.org/do
 
 ![](flowers-two.jpeg){.image-left}
 
-## 
+## {background-image="https://placekitten.com/100/100" background-size="100px" background-repeat="repeat"}
 
 ::: r-fit-text
-[.image-full-cover]{style="color: hotpink;"}
+[background images]{style="color: hotpink;"}
 :::
-
-![](flowers-many.jpeg){.image-full-cover}
 
 ## Setting background colors {background-color="aquamarine"}
 

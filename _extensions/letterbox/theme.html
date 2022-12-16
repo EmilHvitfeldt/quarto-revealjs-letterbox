@@ -1,14 +1,14 @@
 <script>
 // Copy over background colors to new div
-bg_color = document.querySelectorAll('[data-background-color]');
+divs = document.querySelectorAll('[data-background-color]');
 
-Array.from(bg_color).map(function (x) {
+Array.from(divs).map(function (x) {
   const color = x.dataset.backgroundColor;
 
-  var bg_color_div = document.createElement('div');
-  bg_color_div.setAttribute("class", "background-color-div");
-  bg_color_div.style.backgroundColor = color;
-  x.appendChild(bg_color_div);
+  var new_div = document.createElement('div');
+  new_div.setAttribute("class", "background-color-div");
+  new_div.style.backgroundColor = color;
+  x.appendChild(new_div);
   x.removeAttribute("data-background-color");
 })
 
@@ -19,7 +19,42 @@ Array.from(
   x.removeAttribute("data-background-hash");
   x.style.backgroundColor = null;
 })
+</script>
 
+<script>
+// Copy over background images to new div
+divs = document.querySelectorAll('[data-background-image]');
+
+Array.from(divs).map(function (x) {
+  var new_div = document.createElement('div');
+  new_div.setAttribute("class", "background-image-div");
+
+  if (x.dataset.backgroundImage != undefined) {
+    new_div.style.backgroundImage = "url(" + x.dataset.backgroundImage + ")";
+    x.removeAttribute("data-background-image");
+  }
+  if (x.dataset.backgroundSize != undefined) {
+    new_div.style.backgroundSize = x.dataset.backgroundSize;
+    x.removeAttribute("data-background-size");
+  }
+  if (x.dataset.backgroundPosition != undefined) {
+    new_div.style.backgroundPosition = x.dataset.backgroundPosition;
+    x.removeAttribute("data-background-position");
+  }
+  if (x.dataset.backgroundRepeat != undefined) {
+    new_div.style.backgroundRepeat = x.dataset.backgroundRepeat;
+    x.removeAttribute("data-background-repeat");
+  }
+  if (x.dataset.backgroundOpacity != undefined) {
+    new_div.style.backgroundOpacity = x.dataset.backgroundOpacity;
+    x.removeAttribute("data-background-opacity");
+  }
+
+  x.appendChild(new_div);
+})
+</script>
+
+<script>
 // Move menu button
 menu_div = document.querySelector(".slide-menu-button");
 document.querySelector(".slides").appendChild(menu_div);
@@ -28,3 +63,4 @@ document.querySelector(".slides").appendChild(menu_div);
 menu_div = document.querySelector(".progress");
 document.querySelector(".slides").appendChild(menu_div);
 </script>
+

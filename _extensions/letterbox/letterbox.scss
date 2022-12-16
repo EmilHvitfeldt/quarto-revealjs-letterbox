@@ -57,23 +57,6 @@ html.print-pdf .quarto-dark {
   z-index: -1;
 }
 
-.image-full-cover {
-  position: absolute;
-  top: -$border-updown-width;
-  right: -$border-leftright-width;
-  height: auto !important;
-  width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
-  max-width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
-  margin: 0 !important;
-  z-index: -1;
-  clip: rect(
-    0px,
-    calc(var(--slide-width) + #{$border-leftright-width} * 2),
-    calc(var(--slide-height) + #{$border-updown-width} * 2),
-    0px
-  );
-}
-
 .background-color-div {
   position: absolute;
   top: -$border-updown-width;
@@ -85,6 +68,19 @@ html.print-pdf .quarto-dark {
   margin: 0 !important;
   z-index: -1;
 }
+
+.background-image-div {
+  position: absolute;
+  top: -$border-updown-width;
+  right: -$border-leftright-width;
+  height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
+  width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
+  max-height: calc(var(--slide-height) + #{$border-updown-width} * 2) !important;
+  max-width: calc(var(--slide-width) + #{$border-leftright-width} * 2) !important;
+  margin: 0 !important;
+  z-index: -1;
+}
+
 
 .reveal .slide-menu-button {
   left: 8px - $border-leftright-width / 2 !important;
