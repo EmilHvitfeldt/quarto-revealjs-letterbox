@@ -55,6 +55,14 @@ Array.from(divs).map(function (x) {
 </script>
 
 <script>
+// Clean up slide background styles
+divs = document.querySelectorAll('.slide-background-content');
+Array.from(divs).map(function (x) {
+  x.style = null;
+})
+</script>
+
+<script>
 // Move menu button
 menu_div = document.querySelector(".slide-menu-button");
 document.querySelector(".slides").appendChild(menu_div);
