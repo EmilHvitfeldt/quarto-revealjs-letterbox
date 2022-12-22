@@ -88,6 +88,35 @@ Reveal.on('slidechanged', event => {
 </script>
 
 <script>
+// Copy over background vidoes
+
+// Run once when we load
+var iframe_div = document.querySelectorAll(".backgrounds iframe");
+var slide_div = document.querySelectorAll("[data-background-iframe]");
+
+for (let i = 0; i < iframe_div.length; i++) {
+  iframe_div[i].setAttribute("class", "background-iframe-div");
+
+  slide_div[i].appendChild(iframe_div[i]);
+  slide_div[i].removeAttribute("data-background-iframe");
+}
+
+// Each time we advance slides, as the background videos aren't loaded
+// unless they are a few slides away
+Reveal.on('slidechanged', event => {
+  var iframe_div = document.querySelectorAll(".backgrounds iframe");
+  var slide_div = document.querySelectorAll("[data-background-iframe]");
+
+  for (let i = 0; i < iframe_div.length; i++) {
+    iframe_div[i].setAttribute("class", "background-iframe-div");
+
+    slide_div[i].appendChild(iframe_div[i]);
+    slide_div[i].removeAttribute("data-background-iframe");
+  }
+});
+</script>
+
+<script>
 // Clean up slide background styles
 divs = document.querySelectorAll('.slide-background-content');
 Array.from(divs).map(function (x) {

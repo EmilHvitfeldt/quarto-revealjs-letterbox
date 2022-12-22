@@ -42,6 +42,8 @@ you can set your background as you normally would
 
 This slides's background video will play in a loop with audio muted.
 
+## Slide Title {background-iframe="https://example.com"}
+
 ## Further Modifying theme
 
 If you want to modify theme, you can specify the `.scss` my modifying the yaml to look like this

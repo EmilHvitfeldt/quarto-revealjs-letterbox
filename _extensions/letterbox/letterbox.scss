@@ -79,6 +79,15 @@ html.print-pdf .quarto-dark {
   z-index: -1;
 }
 
+.background-iframe-div {
+  @include full-screen;
+  max-width: none !important;
+  max-height: none !important;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1 !important;
+}
+
 .reveal .slide-menu-button {
   left: 8px - $border-leftright-width / 2 !important;
   bottom: 8px - $border-updown-width / 2 !important;
