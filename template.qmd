@@ -38,6 +38,10 @@ It is therefore recommened that you use [multiple columns](https://quarto.org/do
 
 you can set your background as you normally would
 
+## Video Slide Title {background-video="video.mp4" background-video-loop="true" background-video-muted="true"}
+
+This slides's background video will play in a loop with audio muted.
+
 ## Further Modifying theme
 
 If you want to modify theme, you can specify the `.scss` my modifying the yaml to look like this

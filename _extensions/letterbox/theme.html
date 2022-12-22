@@ -55,6 +55,39 @@ Array.from(divs).map(function (x) {
 </script>
 
 <script>
+// Copy over background vidoes
+
+// Run once when we load
+var video_div = document.querySelectorAll(".backgrounds video");
+var slide_div = document.querySelectorAll("[data-background-video]");
+
+for (let i = 0; i < video_div.length; i++) {
+  video_div[i].setAttribute("class", "background-video-div");
+
+  slide_div[i].appendChild(video_div[i]);
+  slide_div[i].removeAttribute("data-background-video");
+}
+
+Reveal.getCurrentSlide().querySelectorAll("video").forEach(x => x.play());
+
+// Each time we advance slides, as the background videos aren't loaded
+// unless they are a few slides away
+Reveal.on('slidechanged', event => {
+  var video_div = document.querySelectorAll(".backgrounds video");
+  var slide_div = document.querySelectorAll("[data-background-video]");
+
+  for (let i = 0; i < video_div.length; i++) {
+    video_div[i].setAttribute("class", "background-video-div");
+
+    slide_div[i].appendChild(video_div[i]);
+    slide_div[i].removeAttribute("data-background-video");
+  }
+
+  Reveal.getCurrentSlide().querySelectorAll("video").forEach(x => x.play());
+});
+</script>
+
+<script>
 // Clean up slide background styles
 divs = document.querySelectorAll('.slide-background-content');
 Array.from(divs).map(function (x) {

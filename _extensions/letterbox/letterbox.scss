@@ -70,6 +70,14 @@ html.print-pdf .quarto-dark {
   @include full-screen;
 }
 
+.background-video-div {
+  @include full-screen;
+  max-width: none !important;
+  max-height: none !important;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1;
+}
 
 .reveal .slide-menu-button {
   left: 8px - $border-leftright-width / 2 !important;
