@@ -1,0 +1,136 @@
+<script>
+// Copy over background colors to new div
+divs = document.querySelectorAll('[data-background-color]');
+
+Array.from(divs).map(function (x) {
+  const color = x.dataset.backgroundColor;
+
+  var new_div = document.createElement('div');
+  new_div.setAttribute("class", "background-color-div");
+  new_div.style.backgroundColor = color;
+  x.appendChild(new_div);
+  x.removeAttribute("data-background-color");
+})
+
+// Remove background colors from backgrounds div
+Array.from(
+  document.querySelectorAll("[data-background-hash]")
+).map(function (x) {
+  x.removeAttribute("data-background-hash");
+  x.style.backgroundColor = null;
+})
+</script>
+
+<script>
+// Copy over background images to new div
+divs = document.querySelectorAll('[data-background-image]');
+
+Array.from(divs).map(function (x) {
+  var new_div = document.createElement('div');
+  new_div.setAttribute("class", "background-image-div");
+
+  if (x.dataset.backgroundImage != undefined) {
+    new_div.style.backgroundImage = "url(" + x.dataset.backgroundImage + ")";
+    x.removeAttribute("data-background-image");
+  }
+  if (x.dataset.backgroundSize != undefined) {
+    new_div.style.backgroundSize = x.dataset.backgroundSize;
+    x.removeAttribute("data-background-size");
+  }
+  if (x.dataset.backgroundPosition != undefined) {
+    new_div.style.backgroundPosition = x.dataset.backgroundPosition;
+    x.removeAttribute("data-background-position");
+  }
+  if (x.dataset.backgroundRepeat != undefined) {
+    new_div.style.backgroundRepeat = x.dataset.backgroundRepeat;
+    x.removeAttribute("data-background-repeat");
+  }
+  if (x.dataset.backgroundOpacity != undefined) {
+    new_div.style.backgroundOpacity = x.dataset.backgroundOpacity;
+    x.removeAttribute("data-background-opacity");
+  }
+
+  x.appendChild(new_div);
+})
+</script>
+
+<script>
+// Copy over background vidoes
+
+// Run once when we load
+var video_div = document.querySelectorAll(".backgrounds video");
+var slide_div = document.querySelectorAll("[data-background-video]");
+
+for (let i = 0; i < video_div.length; i++) {
+  video_div[i].setAttribute("class", "background-video-div");
+
+  slide_div[i].appendChild(video_div[i]);
+  slide_div[i].removeAttribute("data-background-video");
+}
+
+Reveal.getCurrentSlide().querySelectorAll("video").forEach(x => x.play());
+
+// Each time we advance slides, as the background videos aren't loaded
+// unless they are a few slides away
+Reveal.on('slidechanged', event => {
+  var video_div = document.querySelectorAll(".backgrounds video");
+  var slide_div = document.querySelectorAll("[data-background-video]");
+
+  for (let i = 0; i < video_div.length; i++) {
+    video_div[i].setAttribute("class", "background-video-div");
+
+    slide_div[i].appendChild(video_div[i]);
+    slide_div[i].removeAttribute("data-background-video");
+  }
+
+  Reveal.getCurrentSlide().querySelectorAll("video").forEach(x => x.play());
+});
+</script>
+
+<script>
+// Copy over background vidoes
+
+// Run once when we load
+var iframe_div = document.querySelectorAll(".backgrounds iframe");
+var slide_div = document.querySelectorAll("[data-background-iframe]");
+
+for (let i = 0; i < iframe_div.length; i++) {
+  iframe_div[i].setAttribute("class", "background-iframe-div");
+
+  slide_div[i].appendChild(iframe_div[i]);
+  slide_div[i].removeAttribute("data-background-iframe");
+}
+
+// Each time we advance slides, as the background videos aren't loaded
+// unless they are a few slides away
+Reveal.on('slidechanged', event => {
+  var iframe_div = document.querySelectorAll(".backgrounds iframe");
+  var slide_div = document.querySelectorAll("[data-background-iframe]");
+
+  for (let i = 0; i < iframe_div.length; i++) {
+    iframe_div[i].setAttribute("class", "background-iframe-div");
+
+    slide_div[i].appendChild(iframe_div[i]);
+    slide_div[i].removeAttribute("data-background-iframe");
+  }
+});
+</script>
+
+<script>
+// Clean up slide background styles
+divs = document.querySelectorAll('.slide-background-content');
+Array.from(divs).map(function (x) {
+  x.style = null;
+})
+</script>
+
+<script>
+// Move menu button
+menu_div = document.querySelector(".slide-menu-button");
+document.querySelector(".slides").appendChild(menu_div);
+
+// Move progress bar
+menu_div = document.querySelector(".progress");
+document.querySelector(".slides").appendChild(menu_div);
+</script>
+

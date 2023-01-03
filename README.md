@@ -13,7 +13,7 @@ A [Quarto](https://quarto.org) extension for authoring letterbox styled Reveal.j
 To start a new presentation:
 
 ``` bash
-quarto use template EmilHvitfeldt/quarto-letterbox
+quarto use template EmilHvitfeldt/quarto-revealjs-letterbox
 ```
 
 ## Build the presentation
