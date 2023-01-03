@@ -1,6 +1,6 @@
 ---
-title: "xaringan styled letterbox"
-subtitle: "quarto-letterbox"
+title: "letterbox slides"
+subtitle: "quarto-revealjs-letterbox"
 format: letterbox-revealjs
 ---
 
