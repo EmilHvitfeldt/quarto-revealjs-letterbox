@@ -29,3 +29,7 @@ format:
 ## Going further
 
 Read the [Quarto documentation on reveal.js format](https://quarto.org/docs/presentations/revealjs/)
+
+## Spotted in the wild
+
+[From forecast to fable, design decisions for statistical software. - Mitchell O’Hara-Wild - NYR 2023](https://slides.mitchelloharawild.com/nyr2023/)
