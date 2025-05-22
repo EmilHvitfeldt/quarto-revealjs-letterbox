@@ -128,13 +128,13 @@ Array.from(divs).map(function (x) {
 // Move menu button
 menu_div = document.querySelector(".slide-menu-button");
 if (menu_div !== null) {
-  document.querySelector(".slides").appendChild(menu_div);
+  document.querySelector(".slides").prepend(menu_div);
 }
 
 // Move progress bar
 progress_div = document.querySelector(".progress");
 if (progress_div !== null) {
-  document.querySelector(".slides").appendChild(progress_div);
+  document.querySelector(".slides").prepend(progress_div);
 }
 </script>
 
