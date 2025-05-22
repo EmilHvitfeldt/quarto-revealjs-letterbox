@@ -1,7 +1,9 @@
 ---
 title: "letterbox slides"
 subtitle: "quarto-revealjs-letterbox"
-format: letterbox-revealjs
+format: 
+  letterbox-revealjs:
+    menu: false
 ---
 
 ## .image-right
