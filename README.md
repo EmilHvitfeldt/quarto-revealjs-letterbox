@@ -36,5 +36,6 @@ Read the [Quarto documentation on reveal.js format](https://quarto.org/docs/pres
 
 [From forecast to fable, design decisions for statistical software. - Mitchell O’Hara-Wild - NYR 2023](https://slides.mitchelloharawild.com/nyr2023/)
 
-[How the R4DS Online Learning Community Made Me a Better Student -
-Lydia Gibson](https://lgibson7.quarto.pub/how-the-r4ds-online-learning-community-made-me-a-better-student/#/title-slide)
+[How the R4DS Online Learning Community Made Me a Better Student - Lydia Gibson](https://lgibson7.quarto.pub/how-the-r4ds-online-learning-community-made-me-a-better-student/#/title-slide)
+
+[Monash Presentation Templates](https://github.com/quarto-monash/presentation)
